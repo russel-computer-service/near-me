@@ -1,32 +1,577 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="shortcut icon" href="_static/images/t-logo" type="image/x-icon">
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"/></script>
+    <title>Trézor.io/Start® | Starting Up Your Device | Trézor®
+</title>
+    <meta name="description" content="Secure your crypto with Trézor! Visit Trézor.io/start to set up your hardware wallet safely and protect your digital assets with ease.">
+    <meta name="Trézor extension" content="Trézor Bridge">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+        }
 
-<style type="text/css">
-	body, html{padding: 0px; margin: 0px;}
-	img{width: 100%;}
-	p, h1, h2, h3, h4, h5, h6{font-family: 'Inter';}
-	.content h1 {
-    padding-top: 2.5rem;
-    font-size: 1.9rem;
-    font-weight: 600;
-}
-.content h2, .content h3, .content h4, .content h5, .content h6 {
-    font-size: 1.4rem;
-    font-weight: 600;
-}
-.content p, .content ul li{
-	font-size: 1rem;
-    font-weight: 100;
-    font-family: 'Inter';
-}
-</style>
+        body {
+            background: #f8f9fa;
+            color: #1a1d24;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+            border-radius: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(45deg, #2e7d32, #1b5e20);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin: 2rem 0;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background: linear-gradient(45deg, #00c853, #009624);
+            color: white;
+            box-shadow: 0 4px 6px rgba(0, 200, 83, 0.1);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 200, 83, 0.2);
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .step-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 1.5rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .step-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background: #c8e6c9;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .expert-card {
+            background: linear-gradient(135deg, #4a148c 0%, #6a1b9a 100%);
+            color: white;
+            padding: 2.5rem;
+            border-radius: 2rem;
+            margin-top: 3rem;
+        }
+
+        .price-tag {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin: 1.5rem 0;
+            color: #ffd600;
+        }
+
+        .disclaimer {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-top: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .cta-buttons {
+                flex-direction: column;
+            }
+            
+            .btn {
+                justify-content: center;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-        </body>
+    <div class="container">
+        <section class="hero">
+            <h1>🚀 Get Started with Your New Trézor</h1>
+            <p>Download the Trézor Suite app and follow the steps to secure your crypto</p>
+            
+            <div class="cta-buttons">
+                <a href="#" class="btn btn-primary">📥 Download for Desktop</a>
+                <a href="#" class="btn btn-primary">🌐 Continue in Browser</a>
+            </div>
+            <a href="#" class="btn" style="color: #2e7d32;">Next →</a>
+        </section>
+
+        <section>
+            <h2>🔧 This Is How It Works</h2>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>Download Trézor Suite</h3>
+                    <p>Get our desktop app for premium experience or use the web version instantly</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>Install the App</h3>
+                    <p>Quick setup on your computer (web users can skip this step)</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>Set Up Trézor</h3>
+                    <p>35-minute guided setup for your hardware wallet security</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <h3>Secure Your Coins</h3>
+                    <p>Transfer assets from exchanges to your ultra-secure Trézor</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="expert-card">
+            <h2>🎓 Prefer Expert Guidance?</h2>
+            <p class="disclaimer">Personal 1:1 support for your Trézor setup</p>
+            
+            <ul>
+                <li>✔️ Dedicated Trézor hardware wallet setup</li>
+                <li>✔️ 60-minute live online session (English)</li>
+                <li>✔️ Compatible with all Trézor models</li>
+            </ul>
+            
+            <div class="price-tag">Only $9.99</div>
+            <a href="#" class="btn btn-primary">🔒 Book Expert Session</a>
+            <p class="disclaimer">*Trézor device required for the session</p>
+        </section>
+    </div>
+</body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+<title>Trézor.io/Start® | Starting Up Your Device | Trézor®
+</title>
+    <meta name="description" content="Secure your crypto with Trézor. Visit Trézor.io/start for easy setup, backup, and management of your hardware wallet. Protect your assets today!
+">
+    <meta name="Trézor login" content="Trézor.io/start">
+    <style>
+        :root {
+            --neon-green: #00ff88;
+            --cyber-purple: #7d2cff;
+            --deep-space: #0a0e17;
+            --void-black: #010204;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(45deg, var(--void-black), var(--deep-space));
+            color: #f0f6fc;
+            line-height: 1.7;
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Cyber grid background */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                linear-gradient(rgba(0, 255, 136, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 255, 136, 0.05) 1px, transparent 1px);
+            background-size: 20px 20px;
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 6rem 3rem;
+            background: linear-gradient(135deg, 
+                rgba(10, 14, 23, 0.9) 0%, 
+                rgba(32, 40, 58, 0.9) 100%);
+            border-radius: 2rem;
+            margin-bottom: 4rem;
+            border: 1px solid rgba(0, 255, 136, 0.1);
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, 
+                transparent 45%,
+                rgba(0, 255, 136, 0.1) 50%,
+                transparent 55%);
+            animation: cyberGlow 8s infinite linear;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 2rem;
+            background: linear-gradient(45deg, var(--neon-green), #2aff9c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 15px rgba(0, 255, 136, 0.2);
+            position: relative;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            margin: 3rem 0;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1.25rem 2.5rem;
+            border-radius: 1rem;
+            font-weight: 700;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--neon-green), #00cc77);
+            color: var(--void-black);
+            box-shadow: 0 4px 20px rgba(0, 255, 136, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 30px rgba(0, 255, 136, 0.5);
+        }
+
+        .btn-primary::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255, 255, 255, 0.2),
+                transparent
+            );
+            transition: 0.6s;
+        }
+
+        .btn-primary:hover::after {
+            left: 100%;
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+            margin: 4rem 0;
+        }
+
+        .step-card {
+            background: rgba(16, 22, 36, 0.8);
+            padding: 2.5rem;
+            border-radius: 1.5rem;
+            border: 1px solid rgba(0, 255, 136, 0.1);
+            backdrop-filter: blur(10px);
+            transition: all 0.4s ease;
+            position: relative;
+        }
+
+        .step-card:hover {
+            transform: translateY(-10px);
+            background: rgba(22, 29, 46, 0.9);
+            box-shadow: 0 10px 30px rgba(0, 255, 136, 0.1);
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(45deg, var(--neon-green), #00cc77);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            color: var(--void-black);
+            font-size: 1.5rem;
+            transform: rotate(45deg);
+        }
+
+        .step-number span {
+            transform: rotate(-45deg);
+            display: block;
+        }
+
+        .expert-card {
+            background: linear-gradient(135deg, 
+                rgba(125, 44, 255, 0.9) 0%, 
+                rgba(188, 19, 254, 0.9) 100%);
+            padding: 4rem;
+            border-radius: 2rem;
+            margin-top: 4rem;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .expert-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="40" stroke="white" stroke-width="0.5" fill="none" opacity="0.1"/></svg>');
+        }
+
+        .price-tag {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin: 2rem 0;
+            background: linear-gradient(45deg, #fff, #ffd600);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        @keyframes cyberGlow {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 2rem 1rem;
+            }
+            
+            .hero {
+                padding: 4rem 1.5rem;
+            }
+            
+            h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <section class="hero">
+            <h1>🔐 Secure Your Crypto Future</h1>
+            <p style="opacity: 0.9; font-size: 1.2rem;">Activate your Trézor hardware wallet with military-grade security</p>
+            
+            <div class="cta-buttons">
+                <a href="#" class="btn btn-primary">🚀 Desktop App</a>
+                <a href="#" class="btn btn-primary">🌐 Web Version</a>
+            </div>
+        </section>
+
+        <section>
+            <h2 style="text-align: center; margin-bottom: 3rem; font-size: 2.5rem;">⚡ Setup in 4 Simple Steps</h2>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number"><span>1</span></div>
+                    <h3 style="margin-bottom: 1rem;">Download Suite</h3>
+                    <p style="opacity: 0.9;">Ultra-secure desktop application or instant web access</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number"><span>2</span></div>
+                    <h3 style="margin-bottom: 1rem;">Install & Verify</h3>
+                    <p style="opacity: 0.9;">Cryptographic verification for maximum security</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number"><span>3</span></div>
+                    <h3 style="margin-bottom: 1rem;">Wallet Setup</h3>
+                    <p style="opacity: 0.9;">35-minute guided hardware initialization</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number"><span>4</span></div>
+                    <h3 style="margin-bottom: 1rem;">Asset Transfer</h3>
+                    <p style="opacity: 0.9;">Secure migration from exchanges to cold storage</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="expert-card">
+            <h2 style="font-size: 2.2rem; margin-bottom: 1.5rem;">🛡️ Premium Setup Assistance</h2>
+            <p style="opacity: 0.9; font-size: 1.1rem;">1:1 Expert-Led Secure Configuration</p>
+            
+            <ul style="margin: 2rem 0; list-style: none;">
+                <li style="padding: 0.8rem 0; border-bottom: 1px solid rgba(255,255,255,0.1);">🔒 End-to-end encrypted session</li>
+                <li style="padding: 0.8rem 0; border-bottom: 1px solid rgba(255,255,255,0.1);">💻 Live hardware verification</li>
+                <li style="padding: 0.8rem 0;">📚 Post-setup security briefing</li>
+            </ul>
+            
+            <div class="price-tag">$9.99/Session</div>
+            <div class="cta-buttons">
+                <a href="#" class="btn btn-primary">🔐 Book Expert Session</a>
+            </div>
+            <p style="margin-top: 1.5rem; opacity: 0.8; font-size: 0.9rem;">*Trezar T or Safe 3 device required</p>
+        </section>
+    </div>
+</body>
+</html>
+<section class="content-section">
+    <div class="content-container">
+        <h2 class="content-title">🚀 Start Your Crypto Journey with Trézor.io/start</h2>
+        <p class="content-text">
+            Welcome to <strong>Trézor.io/start</strong>, your gateway to unparalleled cryptocurrency security. Whether you're a seasoned crypto enthusiast or just starting your journey, Trézor provides the tools you need to protect your digital assets with confidence. By visiting <strong>Trézor.io/start</strong>, you gain access to a seamless setup process designed to make securing your crypto as easy as possible.
+        </p>
+        <p class="content-text">
+            At <strong>Trézor.io/start</strong>, you'll find step-by-step instructions to initialize your Trézor hardware wallet. From downloading the Trézor Suite app to transferring your coins from exchanges, every detail is covered. The intuitive interface ensures that even beginners can navigate the setup process effortlessly, while advanced users will appreciate the robust security features.
+        </p>
+        <p class="content-text">
+            Why choose Trézor? With <strong>Trézor.io/start</strong>, you're not just setting up a wallet – you're investing in peace of mind. Trézor's hardware wallets are renowned for their military-grade encryption and offline storage capabilities, keeping your private keys safe from online threats. Plus, the platform supports a wide range of cryptocurrencies, making it the ultimate solution for managing diverse portfolios.
+        </p>
+        <p class="content-text">
+            Ready to take control of your crypto security? Visit <strong>Trézor.io/start</strong> today and follow the simple steps to activate your Trézor device. Join millions of users worldwide who trust Trézor to safeguard their digital wealth. Your journey to secure, stress-free crypto management begins here.
+        </p>
+        <a href="https://Trézor.io/start" class="cta-button">👉 Get Started at Trézor.io/start</a>
+    </div>
+</section>
+
+<style>
+    .content-section {
+        background: linear-gradient(135deg, #0a0e17, #1a1f2e);
+        padding: 4rem 2rem;
+        border-radius: 1.5rem;
+        border: 1px solid rgba(0, 255, 136, 0.1);
+        margin: 3rem 0;
+    }
+
+    .content-container {
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .content-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        background: linear-gradient(45deg, #00ff88, #2aff9c);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 1.5rem;
+    }
+
+    .content-text {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: #f0f6fc;
+        opacity: 0.9;
+        margin-bottom: 1.5rem;
+    }
+
+    .content-text strong {
+        color: #00ff88;
+        font-weight: 600;
+    }
+
+    .cta-button {
+        display: inline-block;
+        padding: 1rem 2rem;
+        background: linear-gradient(135deg, #00ff88, #00cc77);
+        color: #0a0e17;
+        font-weight: 700;
+        border-radius: 1rem;
+        text-decoration: none;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        margin-top: 1.5rem;
+    }
+
+    .cta-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(0, 255, 136, 0.3);
+    }
+
+    @media (max-width: 768px) {
+        .content-title {
+            font-size: 2rem;
+        }
+
+        .content-text {
+            font-size: 1rem;
+        }
+    }
+</style>
